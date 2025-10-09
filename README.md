@@ -38,7 +38,8 @@ Browse the `plugins/` directory to discover available plugins. Each plugin inclu
 To add your plugin to this marketplace:
 
 1. Fork this repository
-2. Create a new JSON file in the `plugins/` directory following this template:
+2. Copy `plugin-template.json` to `plugins/your-plugin-name.json`
+3. Fill in your plugin details in the JSON file (or use the template below):
 
 ```json
 {
