@@ -6,6 +6,8 @@ A curated marketplace of awesome plugins for Claude, following the [Claude Plugi
 
 This repository serves as a plugin marketplace for Claude, providing a centralized location to discover and share Claude plugins. Plugins extend Claude's capabilities and enable integration with various tools and services.
 
+**Note:** The plugin examples and structure in this repository are based on the [official Claude Code plugin examples](https://github.com/anthropics/claude-code/tree/main/plugins).
+
 ## Marketplace Structure
 
 This marketplace follows the Claude plugin marketplace format:
@@ -18,14 +20,10 @@ This marketplace follows the Claude plugin marketplace format:
 
 Browse the `plugins/` directory to discover available plugins. Each plugin includes:
 
-- **Name & Display Name**: Unique identifier and human-readable name
+- **Name**: Unique identifier for the plugin
 - **Version**: Semantic versioning
 - **Description**: What the plugin does
 - **Author**: Plugin maintainer information
-- **Keywords**: Tags for discoverability
-- **Category**: Plugin classification
-- **Capabilities**: List of features and functionalities
-- **Repository**: Source code location
 
 ### Example Plugins
 
@@ -44,26 +42,12 @@ To add your plugin to this marketplace:
 ```json
 {
   "name": "your-plugin-name",
-  "displayName": "Your Plugin Display Name",
   "version": "1.0.0",
   "description": "A brief description of what your plugin does",
   "author": {
     "name": "Your Name",
     "email": "your.email@example.com"
-  },
-  "keywords": ["keyword1", "keyword2", "keyword3"],
-  "license": "MIT",
-  "homepage": "https://github.com/yourusername/your-plugin",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/yourusername/your-plugin"
-  },
-  "main": "index.js",
-  "category": "utilities",
-  "capabilities": [
-    "List of features",
-    "Your plugin provides"
-  ]
+  }
 }
 ```
 
@@ -78,23 +62,10 @@ To add your plugin to this marketplace:
 
 - Use semantic versioning (MAJOR.MINOR.PATCH)
 - Provide clear, concise descriptions
-- Include relevant keywords for discoverability
-- Specify an appropriate category
-- List all major capabilities
 - Ensure your plugin repository is publicly accessible
 - Include proper documentation in your plugin repository
 
-### Categories
-
-Common plugin categories include:
-- `utilities` - General utility tools
-- `information` - Information retrieval and search
-- `language` - Translation and language processing
-- `productivity` - Productivity and workflow tools
-- `development` - Developer tools and integrations
-- `data` - Data processing and analysis
-- `communication` - Messaging and communication tools
-- `media` - Media processing and manipulation
+For more examples, see the [official Claude Code plugins](https://github.com/anthropics/claude-code/tree/main/plugins).
 
 ## Usage
 
@@ -161,5 +132,7 @@ For issues or questions:
 - Review existing issues for similar problems
 
 ## Acknowledgments
+
+This repository is inspired by and based on the [official Claude Code plugin examples](https://github.com/anthropics/claude-code/tree/main/plugins).
 
 Thanks to all plugin authors and contributors who help expand Claude's capabilities!

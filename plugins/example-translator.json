@@ -1,25 +1,9 @@
 {
   "name": "example-translator",
-  "displayName": "Translator Plugin",
   "version": "2.0.0",
   "description": "Translate text between multiple languages with high accuracy",
   "author": {
     "name": "Translation Team",
     "email": "translate@example.com"
-  },
-  "keywords": ["translation", "language", "i18n", "localization"],
-  "license": "Apache-2.0",
-  "homepage": "https://github.com/example/translator-plugin",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/example/translator-plugin"
-  },
-  "main": "index.js",
-  "category": "language",
-  "capabilities": [
-    "Support for 100+ languages",
-    "Real-time translation",
-    "Context-aware translations",
-    "Batch translation support"
-  ]
+  }
 }

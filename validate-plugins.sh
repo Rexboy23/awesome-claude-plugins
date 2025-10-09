@@ -18,7 +18,7 @@ if [ ! -d "$PLUGINS_DIR" ]; then
 fi
 
 # Required fields for a valid plugin
-REQUIRED_FIELDS=("name" "displayName" "version" "description" "author" "keywords" "license" "repository" "main" "category")
+REQUIRED_FIELDS=("name" "version" "description" "author")
 
 # Validate each JSON file
 for plugin_file in "$PLUGINS_DIR"/*.json; do

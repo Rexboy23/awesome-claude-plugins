@@ -1,28 +1,9 @@
 {
   "name": "plugin-name",
-  "displayName": "Plugin Display Name",
   "version": "1.0.0",
   "description": "A clear and concise description of what your plugin does",
   "author": {
     "name": "Your Name",
     "email": "your.email@example.com"
-  },
-  "keywords": [
-    "keyword1",
-    "keyword2",
-    "keyword3"
-  ],
-  "license": "MIT",
-  "homepage": "https://github.com/yourusername/your-plugin-repo",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/yourusername/your-plugin-repo"
-  },
-  "main": "index.js",
-  "category": "utilities",
-  "capabilities": [
-    "Describe feature 1",
-    "Describe feature 2",
-    "Describe feature 3"
-  ]
+  }
 }

@@ -2,6 +2,8 @@
 
 Thank you for your interest in contributing to the Awesome Claude Plugins marketplace! This document provides guidelines for submitting plugins and improvements.
 
+**Note:** Our plugin format is based on the [official Claude Code plugin examples](https://github.com/anthropics/claude-code/tree/main/plugins).
+
 ## How to Contribute
 
 ### Adding a New Plugin
@@ -18,7 +20,6 @@ Thank you for your interest in contributing to the Awesome Claude Plugins market
 3. **Fill in Plugin Details**
    - Provide accurate and complete information
    - Use clear, concise descriptions
-   - Include relevant keywords for discoverability
    - Ensure your plugin repository is publicly accessible
 
 4. **Validate Your Submission**
@@ -57,23 +58,16 @@ To be accepted, plugins should:
 ```json
 {
   "name": "plugin-name",
-  "displayName": "Plugin Display Name",
   "version": "1.0.0",
   "description": "Clear description of what the plugin does",
   "author": {
     "name": "Your Name",
     "email": "your.email@example.com"
-  },
-  "keywords": ["keyword1", "keyword2"],
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/username/plugin-repo"
-  },
-  "main": "index.js",
-  "category": "utilities"
+  }
 }
 ```
+
+For more examples, see the [official Claude Code plugins](https://github.com/anthropics/claude-code/tree/main/plugins).
 
 ### Updating an Existing Plugin
 
