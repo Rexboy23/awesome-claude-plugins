@@ -11,8 +11,8 @@
     "url": "https://github.com/GiladShoham/awesome-claude-plugins"
   },
   "plugins": [
-    "plugins/example-calculator.json",
-    "plugins/example-weather.json",
-    "plugins/example-translator.json"
+    "plugins/example-calculator/.claude-plugin/plugin.json",
+    "plugins/example-weather/.claude-plugin/plugin.json",
+    "plugins/example-translator/.claude-plugin/plugin.json"
   ]
 }

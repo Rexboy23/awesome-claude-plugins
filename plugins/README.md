@@ -1,12 +1,25 @@
 # Plugin Definitions
 
-This directory contains JSON definitions for all plugins available in the Awesome Claude Plugins marketplace.
+This directory contains plugin definitions for all plugins available in the Awesome Claude Plugins marketplace.
 
-**Note:** The plugin schema is based on the [official Claude Code plugin format](https://github.com/anthropics/claude-code/tree/main/plugins).
+**Note:** The plugin structure follows the [official Claude Code plugin format](https://github.com/anthropics/claude-code/tree/main/plugins).
 
-## Plugin Schema
+## Plugin Structure
 
-Each plugin must be defined as a JSON file with the following structure:
+Each plugin is organized as a directory with the following structure:
+
+```
+plugin-name/
+├── .claude-plugin/         # Plugin configuration directory
+│   └── plugin.json         # Plugin metadata (JSON)
+├── hooks/                  # Lifecycle hooks
+├── agents/                 # Agent definitions
+└── commands/               # Custom commands
+```
+
+## Plugin Metadata (.claude-plugin/plugin.json)
+
+The `.claude-plugin` directory contains a `plugin.json` file with the plugin metadata in JSON format with the following structure:
 
 ### Required Fields
 
@@ -33,28 +46,50 @@ Each plugin must be defined as a JSON file with the following structure:
 
 For more examples, see the [official Claude Code plugins](https://github.com/anthropics/claude-code/tree/main/plugins).
 
+## Plugin Components
+
+### Hooks
+
+The `hooks/` directory contains lifecycle hooks that run at specific points:
+- `on_load.sh` - Runs when the plugin is loaded
+- `on_unload.sh` - Runs when the plugin is unloaded
+- `on_enable.sh` - Runs when the plugin is enabled
+- `on_disable.sh` - Runs when the plugin is disabled
+
+### Agents
+
+The `agents/` directory contains agent definitions. Agents are specialized AI assistants that can be invoked to perform specific tasks.
+
+### Commands
+
+The `commands/` directory contains custom commands that users can invoke to perform plugin-specific operations.
+
 ## Naming Convention
 
-Plugin definition files should be named using the plugin's unique identifier:
-- Format: `{name}.json`
-- Example: `example-calculator.json` for a plugin named "example-calculator"
+Plugin directories should be named using the plugin's unique identifier:
+- Format: `{name}/`
+- Example: `example-calculator/` for a plugin named "example-calculator"
+- The `plugin.json` file inside `.claude-plugin/` should contain the same name
 
 ## Validation
 
-Before submitting, ensure your plugin definition:
-1. Is valid JSON (use a JSON validator)
-2. Contains all required fields
+Before submitting, ensure your plugin:
+1. Has a valid `.claude-plugin/` directory with a `plugin.json` file containing proper JSON syntax
+2. Contains all required fields in the metadata
 3. Uses semantic versioning
 4. Has a unique name (not already in use)
 5. Includes clear, accurate descriptions
+6. Has the proper directory structure with hooks/, agents/, and commands/ folders
 
 ## Submission Process
 
-1. Create a new JSON file in this directory
-2. Follow the schema and naming conventions
-3. Test your JSON for validity
-4. Submit via pull request to the main repository
-5. Wait for review and approval
+1. Create a new directory in this folder with your plugin name
+2. Add the `.claude-plugin/` directory with a `plugin.json` metadata file
+3. Create the hooks/, agents/, and commands/ subdirectories
+4. Follow the schema and naming conventions
+5. Test your plugin structure
+6. Submit via pull request to the main repository
+7. Wait for review and approval
 
 ## Questions?
 

@@ -13,8 +13,13 @@ This repository serves as a plugin marketplace for Claude, providing a centraliz
 This marketplace follows the Claude plugin marketplace format:
 
 - `marketplace.json` - Marketplace metadata and configuration
-- `plugins/` - Directory containing individual plugin definitions
-- Each plugin is defined in a JSON file with metadata including name, description, version, author, and capabilities
+- `plugins/` - Directory containing individual plugin directories
+- Each plugin is a directory containing:
+  - `.claude-plugin/` - Plugin configuration directory
+    - `plugin.json` - Plugin metadata (JSON)
+  - `hooks/` - Lifecycle hooks
+  - `agents/` - Agent definitions
+  - `commands/` - Custom commands
 
 ## Available Plugins
 
@@ -36,8 +41,18 @@ Browse the `plugins/` directory to discover available plugins. Each plugin inclu
 To add your plugin to this marketplace:
 
 1. Fork this repository
-2. Copy `plugin-template.json` to `plugins/your-plugin-name.json`
-3. Fill in your plugin details in the JSON file (or use the template below):
+2. Create a new directory in `plugins/` with your plugin name: `plugins/your-plugin-name/`
+3. Create the required structure:
+   ```
+   plugins/your-plugin-name/
+   ├── .claude-plugin/         # Plugin configuration directory
+   │   └── plugin.json         # Plugin metadata
+   ├── hooks/                  # Lifecycle hooks
+   ├── agents/                 # Agent definitions
+   └── commands/               # Custom commands
+   ```
+
+4. Fill in your `.claude-plugin/plugin.json` file with plugin details:
 
 ```json
 {
@@ -51,12 +66,12 @@ To add your plugin to this marketplace:
 }
 ```
 
-3. Validate your plugin definition locally:
+5. Validate your plugin definition locally:
    ```bash
    ./validate-plugins.sh
    ```
 
-4. Submit a pull request with your plugin definition
+6. Submit a pull request with your plugin
 
 ### Plugin Guidelines
 

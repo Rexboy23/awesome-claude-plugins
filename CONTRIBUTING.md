@@ -12,23 +12,29 @@ Thank you for your interest in contributing to the Awesome Claude Plugins market
    - Fork this repository to your GitHub account
    - Clone your fork locally
 
-2. **Create a Plugin Definition**
+2. **Create a Plugin Directory**
    - Navigate to the `plugins/` directory
-   - Create a new JSON file named `{your-plugin-name}.json`
-   - Follow the plugin schema documented in `plugins/README.md`
+   - Copy the `plugin-template/` directory to a new directory named `{your-plugin-name}/`
+   - Follow the plugin structure documented in `plugins/README.md`
 
 3. **Fill in Plugin Details**
+   - Edit the `.claude-plugin/plugin.json` file with your plugin metadata
    - Provide accurate and complete information
    - Use clear, concise descriptions
    - Ensure your plugin repository is publicly accessible
 
-4. **Validate Your Submission**
-   - Check that your JSON is valid (use an online validator or `jq`)
+4. **Add Plugin Components**
+   - Add lifecycle hooks in the `hooks/` directory as needed
+   - Add agent definitions in the `agents/` directory as needed
+   - Add custom commands in the `commands/` directory as needed
+
+5. **Validate Your Submission**
+   - Verify the `.claude-plugin/plugin.json` file has valid JSON syntax
    - Verify all required fields are present
    - Ensure your plugin name is unique
-   - Confirm the repository URL is correct and accessible
+   - Run `./validate-plugins.sh` to check your plugin structure
 
-5. **Submit a Pull Request**
+6. **Submit a Pull Request**
    - Commit your changes with a clear message: `Add {plugin-name} plugin`
    - Push to your fork
    - Create a pull request to the main repository
@@ -53,7 +59,20 @@ To be accepted, plugins should:
 - Avoid special characters
 - Examples: `weather-forecast`, `code-formatter`, `task-manager`
 
-### Required Plugin Fields
+### Required Plugin Structure
+
+Each plugin must follow this directory structure:
+
+```
+your-plugin-name/
+├── .claude-plugin/         # Plugin configuration directory
+│   └── plugin.json         # Plugin metadata (JSON)
+├── hooks/                  # Lifecycle hooks
+├── agents/                 # Agent definitions
+└── commands/               # Custom commands
+```
+
+The `.claude-plugin/plugin.json` file must contain:
 
 ```json
 {
@@ -74,16 +93,17 @@ For more examples, see the [official Claude Code plugins](https://github.com/ant
 If you maintain a plugin and need to update its information:
 
 1. Fork the repository
-2. Update your plugin's JSON file in the `plugins/` directory
-3. Increment the version number according to semantic versioning
-4. Submit a pull request with the changes
+2. Update your plugin's `.claude-plugin/plugin.json` file in the `plugins/{your-plugin-name}/` directory
+3. Update any hooks, agents, or commands as needed
+4. Increment the version number according to semantic versioning
+5. Submit a pull request with the changes
 
 ### Removing a Plugin
 
 To request removal of a plugin:
 
 1. Open an issue explaining the reason for removal
-2. If you're the plugin author, you can submit a PR removing the file
+2. If you're the plugin author, you can submit a PR removing the directory
 3. Reasons for removal might include:
    - Plugin is no longer maintained
    - Plugin repository no longer exists

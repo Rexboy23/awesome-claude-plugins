@@ -3,13 +3,13 @@ name: Validate Plugins
 on:
   pull_request:
     paths:
-      - 'plugins/**/*.json'
+      - 'plugins/**/.claude-plugin/plugin.json'
       - 'marketplace.json'
   push:
     branches:
       - main
     paths:
-      - 'plugins/**/*.json'
+      - 'plugins/**/.claude-plugin/plugin.json'
       - 'marketplace.json'
 
 jobs:
@@ -41,7 +41,7 @@ jobs:
       - name: Check for duplicate plugin names
         run: |
           echo "Checking for duplicate plugin names..."
-          duplicates=$(jq -r '.name' plugins/*.json 2>/dev/null | sort | uniq -d)
+          duplicates=$(find plugins -name "plugin.json" -path "*/.claude-plugin/plugin.json" -exec jq -r '.name' {} \; 2>/dev/null | sort | uniq -d)
           if [ -n "$duplicates" ]; then
             echo "❌ Duplicate plugin names found:"
             echo "$duplicates"
