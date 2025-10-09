@@ -1,24 +1,9 @@
 {
   "name": "example-calculator",
-  "displayName": "Calculator Plugin",
   "version": "1.0.0",
   "description": "A simple calculator plugin for performing basic arithmetic operations",
   "author": {
     "name": "Example Author",
     "email": "author@example.com"
-  },
-  "keywords": ["calculator", "math", "arithmetic"],
-  "license": "MIT",
-  "homepage": "https://github.com/example/calculator-plugin",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/example/calculator-plugin"
-  },
-  "main": "index.js",
-  "category": "utilities",
-  "capabilities": [
-    "Basic arithmetic operations",
-    "Scientific calculations",
-    "Unit conversions"
-  ]
+  }
 }
