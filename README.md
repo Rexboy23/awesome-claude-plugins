@@ -66,7 +66,12 @@ To add your plugin to this marketplace:
 }
 ```
 
-3. Submit a pull request with your plugin definition
+3. Validate your plugin definition locally:
+   ```bash
+   ./validate-plugins.sh
+   ```
+
+4. Submit a pull request with your plugin definition
 
 ### Plugin Guidelines
 
@@ -101,17 +106,45 @@ To use this marketplace with Claude:
 
 Refer to the [official Claude plugin documentation](https://docs.claude.com/en/docs/claude-code/plugin-marketplaces) for detailed setup instructions.
 
+## Validation
+
+We provide tools to validate plugin definitions:
+
+### Local Validation
+
+Run the validation script locally before submitting:
+
+```bash
+./validate-plugins.sh
+```
+
+This script checks:
+- Valid JSON syntax
+- Required fields presence
+- Semantic versioning format
+- Filename consistency with plugin name
+
+### Automated CI Validation
+
+All pull requests are automatically validated through GitHub Actions, which checks:
+- Plugin JSON validity
+- Marketplace.json validity
+- No duplicate plugin names
+- All marketplace references are valid
+
 ## Contributing
 
-Contributions are welcome! Please read our contributing guidelines before submitting pull requests.
+Contributions are welcome! Please read our [CONTRIBUTING.md](CONTRIBUTING.md) guidelines before submitting pull requests.
 
 ### Contribution Process
 
 1. Check existing plugins to avoid duplicates
-2. Ensure your plugin follows the JSON schema
-3. Test your plugin definition for valid JSON
+2. Ensure your plugin follows the JSON schema (see [plugins/README.md](plugins/README.md))
+3. Validate your plugin definition: `./validate-plugins.sh`
 4. Submit a pull request with a clear description
 5. Respond to any feedback during review
+
+All pull requests are automatically validated by our CI workflow to ensure quality and consistency.
 
 ## License
 

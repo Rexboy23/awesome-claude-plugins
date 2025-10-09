@@ -1,0 +1,61 @@
+name: Validate Plugins
+
+on:
+  pull_request:
+    paths:
+      - 'plugins/**/*.json'
+      - 'marketplace.json'
+  push:
+    branches:
+      - main
+    paths:
+      - 'plugins/**/*.json'
+      - 'marketplace.json'
+
+jobs:
+  validate:
+    name: Validate Plugin Definitions
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Install jq
+        run: sudo apt-get update && sudo apt-get install -y jq
+      
+      - name: Validate marketplace.json
+        run: |
+          echo "Validating marketplace.json..."
+          if ! jq empty marketplace.json; then
+            echo "❌ marketplace.json is not valid JSON"
+            exit 1
+          fi
+          echo "✅ marketplace.json is valid"
+      
+      - name: Validate plugin files
+        run: |
+          chmod +x validate-plugins.sh
+          ./validate-plugins.sh
+      
+      - name: Check for duplicate plugin names
+        run: |
+          echo "Checking for duplicate plugin names..."
+          duplicates=$(jq -r '.name' plugins/*.json 2>/dev/null | sort | uniq -d)
+          if [ -n "$duplicates" ]; then
+            echo "❌ Duplicate plugin names found:"
+            echo "$duplicates"
+            exit 1
+          fi
+          echo "✅ No duplicate plugin names"
+      
+      - name: Validate plugin references in marketplace.json
+        run: |
+          echo "Validating plugin references..."
+          for plugin in $(jq -r '.plugins[]' marketplace.json); do
+            if [ ! -f "$plugin" ]; then
+              echo "❌ Referenced plugin file not found: $plugin"
+              exit 1
+            fi
+          done
+          echo "✅ All plugin references are valid"
