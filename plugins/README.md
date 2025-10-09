@@ -50,11 +50,14 @@ For more examples, see the [official Claude Code plugins](https://github.com/ant
 
 ### Hooks
 
-The `hooks/` directory contains lifecycle hooks that run at specific points:
-- `on_load.sh` - Runs when the plugin is loaded
-- `on_unload.sh` - Runs when the plugin is unloaded
-- `on_enable.sh` - Runs when the plugin is enabled
-- `on_disable.sh` - Runs when the plugin is disabled
+The `hooks/` directory contains event-based hooks that run at specific points during Claude Code execution. Hooks are defined in a `hooks.json` file and can be triggered by events such as:
+- **PreToolUse** - Before a tool is executed
+- **PostToolUse** - After a tool completes
+- **SessionEnd** - When a session ends
+- **Stop** - When Claude stops execution
+- And more
+
+For detailed information, see the [official hooks documentation](https://docs.claude.com/en/docs/claude-code/hooks).
 
 ### Agents
 
