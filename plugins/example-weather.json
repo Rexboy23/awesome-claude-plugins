@@ -1,0 +1,25 @@
+{
+  "name": "example-weather",
+  "displayName": "Weather Plugin",
+  "version": "1.2.0",
+  "description": "Get current weather information and forecasts for any location",
+  "author": {
+    "name": "Weather Dev",
+    "email": "weather@example.com"
+  },
+  "keywords": ["weather", "forecast", "meteorology"],
+  "license": "MIT",
+  "homepage": "https://github.com/example/weather-plugin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/example/weather-plugin"
+  },
+  "main": "index.js",
+  "category": "information",
+  "capabilities": [
+    "Current weather conditions",
+    "7-day forecast",
+    "Weather alerts",
+    "Historical weather data"
+  ]
+}
