@@ -22,6 +22,16 @@
     {
       "name": "example-translator",
       "source": "./plugins/example-translator"
+    },
+    {
+      "name": "toprank",
+      "source": "./plugins/toprank",
+      "description": "SEO analysis, Google Ads management, keyword research, content optimization, schema markup, and meta tags optimization.",
+      "version": "0.10.0",
+      "author": {
+        "name": "nowork-studio"
+      },
+      "category": "productivity"
     }
   ]
 }
