@@ -1,0 +1,11 @@
+{
+  "name": "hermes-tweet",
+  "version": "0.1.6",
+  "description": "Hermes Agent plugin for safe X/Twitter exploration, reads, and gated actions through Hermes Tweet",
+  "author": {
+    "name": "Xquik",
+    "email": "support@xquik.com"
+  },
+  "homepage": "https://github.com/Xquik-dev/hermes-tweet",
+  "license": "MIT"
+}
